@@ -1,0 +1,176 @@
+.vertical-align-content {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.clearfix {
+    display: block;
+    clear: both;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.form-label,
+.form-check-input {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-check-label,
+.swtich-no {
+    font-weight: normal;
+}
+
+.banner {
+    min-width: 720px;
+    width: 720px;
+    min-height: 300px;
+    height: 300px;
+    position: relative;
+    overflow: clip;
+    background: rgb(0, 22, 36);
+    background: linear-gradient(58deg, rgba(0, 22, 36, 1) 24%, rgba(39, 84, 113, 1) 71%, rgba(66, 99, 106, 1) 100%);
+    font-family: "Russo One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-background {
+    position: absolute;
+    z-index: 1;
+    width: 130%;
+    top: -10%;
+    left: -10%;
+}
+
+.banner-main-image {
+    position: absolute;
+    z-index: 7;
+    height: 100%;
+    width: 40%;
+    right: 0;
+    margin: 0;
+}
+
+.banner-main-image img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(0px 0px 10px #444);
+    filter: drop-shadow(0px 0px 10px #444);
+    width: 100%;
+}
+
+.banner-background svg,
+.banner-main-image img {
+    cursor: move;
+}
+
+
+.banner-rows {
+    pointer-events: none;
+    position: absolute;
+    z-index: 7;
+    top: 143px;
+    width: 100%;
+    padding-right: 190px;
+}
+
+.banner-row > div {
+    position: relative;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    margin: 0 13px 13px 0;
+    padding: 10px;
+}
+
+.banner-row-bottom {
+    margin-top: -40px;
+}
+
+
+.banner-row-bottom > div {
+    padding: 15px;
+    border: 0;
+}
+
+.banner-row img {
+    max-width: 85%;
+    max-height: 85%;
+    -webkit-filter: drop-shadow(0px 0px 15px #333);
+    filter: drop-shadow(0px 0px 15px #333);
+}
+
+
+.weakness-top,
+.weakness-bottom,
+.weakness2-top,
+.weakness2-bottom {
+    display: none;
+}
+
+.sgb-top img {
+    margin-top: 6px;
+    margin-left: 3px;
+}
+
+.poisonable-top img {
+    margin-top: 2px;
+}
+
+.weakness2-top img,
+.weakness-top img {
+    margin-top: 3px;
+}
+
+.familiar-top img {
+    margin-top: 4px;
+}
+
+.poisonable-bottom img,
+.weakness-bottom img,
+.familiar-bottom img {
+    margin-top: 3px;
+    margin-left: 1px;
+}
+
+.banner-title {
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding-right: 195px;
+    top: 58px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    -webkit-filter: drop-shadow(0px 0px 15px #333);
+    filter: drop-shadow(0px 0px 15px #333);
+}
+
+.boss-size-top > div {
+    line-height: 1;
+}
+
+.boss-size-top span {
+    margin-left: 2px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.boss-size2 {
+    display: none;
+}
