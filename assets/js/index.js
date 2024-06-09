@@ -7,17 +7,6 @@ $(function() {
         e.preventDefault()
     })
 
-    // Download as PNG
-    async function downloadicon() {
-        const data = await html2canvas(document.querySelector("#wrapper"));
-        document.querySelector("#preview").src = data.toDataURL()
-        data.toBlob(function(blob) {
-            const item = new ClipboardItem({ "image/png": blob })
-            navigator.clipboard.write([item])
-        })
-    }
-    $("#download-icon").show().on('click', downloadicon)
-
     // Prepare icons
     var icons = {
         'magic': 'data:image/png;base64,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'
@@ -28,6 +17,16 @@ $(function() {
 
     $.each(icons, function (key, data) {
         $("." + key + " img").attr("src", data)
+    })
+
+
+    // create & download
+    $("#create-icon").show().on('click', async function downloadIcon() {
+        const data = await html2canvas(document.querySelector("#wrapper"));
+        data.toBlob(function(blob) {
+            const filename = $(".icon-title").text()
+            saveAs(blob, filename + ".png");
+        })
     })
 
 
