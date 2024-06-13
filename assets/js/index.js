@@ -81,9 +81,9 @@ $(function() {
 
     function checkToHideGradient() {
         if($('.icons').children(':visible').length == 0) {
-            $('body').addClass('no-gradient')
+            $('body').addClass('no-icons')
         } else {
-            $('body').removeClass('no-gradient')
+            $('body').removeClass('no-icons')
         }
     }
 
