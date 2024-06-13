@@ -1,9 +1,6 @@
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
 $(function() {
 
-    $("form").on("submit", function (e){
+    $('form').on('submit', function (e){
         e.preventDefault()
     })
 
@@ -15,67 +12,80 @@ $(function() {
       , 'necromancy': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAB9CAMAAACf8B3/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAwBQTFRFAAAA0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/0gD/yYNwhQAAAQB0Uk5TAAECAwUGBwgECQwQFBgbHSAhIg0TKjI5P0RITE5PIys2Q1BcZ3F5f4WJi4w3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'
     }
 
+    var $body = $('body')
+      , $iconNecro = $('.necromancy')
+      , $iconMelee = $('.melee')
+      , $iconMagic = $('.magic')
+      , $iconRanged = $('.ranged')
+
     $.each(icons, function (key, data) {
-        $("." + key + " img").attr("src", data)
+        $('.' + key + ' img').attr('src', data)
     })
 
 
     // create & download
-    $("#create-icon").show().on('click', async function downloadIcon() {
-        const data = await html2canvas(document.querySelector("#wrapper"));
+    $('#create-icon').show().on('click', async function downloadIcon() {
+        const data = await html2canvas(document.querySelector('#wrapper'));
         data.toBlob(function(blob) {
-            const filename = $(".icon-title").text()
-            saveAs(blob, filename + ".png");
+            const filename = $('.icon-title').text()
+            saveAs(blob, filename + '.png');
         })
     })
 
 
     // Live update title
-    $("#iconTitle").on('input', function() {
+    $('#iconTitle').on('input', function() {
         val = this.value
-        $(".icon-title").text(val)
+        $('.icon-title').text(val)
     })
 
     // Live update magic
-    $("#magic").on('change', function() {
-        img = $(".magic")
+    $('#magic').on('change', function() {
         if ($(this).is(':checked')) {
-            img.show()
+            $iconMagic.show()
         } else {
-            img.hide()
+            $iconMagic.hide()
         }
+        checkToHideGradient()
     })
 
     // Live update ranged
-    $("#ranged").on('change', function() {
-        img = $(".ranged")
+    $('#ranged').on('change', function() {
         if ($(this).is(':checked')) {
-            img.show()
+            $iconRanged.show()
         } else {
-            img.hide()
+            $iconRanged.hide()
         }
+        checkToHideGradient()
     })
 
     // Live update melee
-    $("#melee").on('change', function() {
-        img = $(".melee")
+    $('#melee').on('change', function() {
         if ($(this).is(':checked')) {
-            img.show()
+            $iconMelee.show()
         } else {
-            img.hide()
+            $iconMelee.hide()
         }
+        checkToHideGradient()
     })
 
     // Live update necromancy
-    $("#necromancy").on('change', function() {
-        img = $(".necromancy")
+    $('#necromancy').on('change', function() {
         if ($(this).is(':checked')) {
-            img.show()
+            $iconNecro.show()
         } else {
-            img.hide()
+            $iconNecro.hide()
         }
+        checkToHideGradient()
     })
 
+    function checkToHideGradient() {
+        if($('.icons').children(':visible').length == 0) {
+            $('body').addClass('no-gradient')
+        } else {
+            $('body').removeClass('no-gradient')
+        }
+    }
 
 })
 
@@ -87,7 +97,7 @@ function dragElement(elmnt) {
 
     elmnt.onmousedown = dragMouseDown;
 
-    elmnt.addEventListener("wheel", (e) => {
+    elmnt.addEventListener('wheel', (e) => {
         e.preventDefault()
         var img = $(elmnt).find('img')
         var currentSize = img.width()
@@ -118,8 +128,8 @@ function dragElement(elmnt) {
         pos3 = e.clientX;
         pos4 = e.clientY;
         // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        elmnt.style.top = (elmnt.offsetTop - pos2) + 'px';
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + 'px';
     }
 
     function closeDragElement() {
@@ -132,8 +142,8 @@ function dragElement(elmnt) {
 
 // Add images from file
 function iconUpload(itemName, blur) {
-    var elementId = "icon-" + itemName
-    var filesSelected = document.getElementById(elementId + "-uploader").files
+    var elementId = 'icon-' + itemName
+    var filesSelected = document.getElementById(elementId + '-uploader').files
     if (filesSelected.length > 0) {
         var fileToLoad = filesSelected[0]
 
@@ -145,7 +155,7 @@ function iconUpload(itemName, blur) {
             var srcData = fileLoadedEvent.target.result
 
             newImage.src = srcData
-            var iconItem = document.getElementById("icon-" + itemName)
+            var iconItem = document.getElementById('icon-' + itemName)
             iconItem.append(newImage)
             iconItem.innerHTML = newImage.outerHTML
         }

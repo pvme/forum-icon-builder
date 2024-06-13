@@ -77,6 +77,10 @@
     background: linear-gradient(90deg, rgb(22,22,22,0) 0%, rgba(22,22,22,75%) 40%);
 }
 
+.no-gradient .icons-wrapper:after {
+    display: none;
+}
+
 .icons {
     position: absolute;
     bottom: 20px;
