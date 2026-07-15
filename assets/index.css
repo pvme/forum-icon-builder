@@ -56,6 +56,22 @@
     text-align: center;
 }
 
+.icon-grid {
+    --grid-size: 16px;
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+}
+
+.hide-grid .icon-grid {
+    display: none;
+}
+
 .icon-title {
     pointer-events: none;
     position: absolute;

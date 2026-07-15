@@ -173,7 +173,7 @@
                                             <hr />
                                             <h4>Getting started...</h4>
                                             <ul class="text-md">
-                                                <li>Once loaded, you can <strong>drag and scroll-to-resize</strong> your background image</li>
+                                                <li>Once loaded, you can <strong>drag and resize</strong> your background image</li>
                                             </ul>
                                             <hr />
                                             <h4 class="text-md">Links</h4>
@@ -207,6 +207,22 @@
                                 <div class="mb-3">
                                     <label for="icon-background-uploader" class="form-label">Background image:</label>
                                     <input id="icon-background-uploader" class="form-control" type="file" onchange="iconUpload('background',true)" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="background-zoom" class="form-label">Image zoom: <span id="background-zoom-value">100%</span></label>
+                                    <input id="background-zoom" class="form-range" type="range" min="16" max="4096" step="16" value="512">
+                                </div>
+                                <div id="background-resolution-warning" class="alert alert-warning py-2 d-none" role="alert"></div>
+                                <div class="mb-2">
+                                    <label for="show-grid" class="form-label">Grid?
+                                        <div class="col">
+                                            <div class="d-inline-block me-1 swtich-no">No</div>
+                                            <div class="form-check form-switch d-inline-block">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="show-grid" checked>
+                                                <span class="form-check-label">Yes</span>
+                                            </div>
+                                        </div>
+                                    </label>
                                 </div>
                                 <div class="mb-2">
                                     <label for="magic" class="form-label">Magic?
@@ -261,6 +277,7 @@
                             <div class="wrapper shadow mb-3" id="wrapper">
                                 <div class="icon-title">Start typing</div>
                                 <div class="icon-background" id="icon-background"></div>
+                                <div class="icon-grid" data-html2canvas-ignore="true"></div>
                                 <!-- ROW ONE -->
                                 <div class="icons-wrapper">
                                     <div class="icons">
